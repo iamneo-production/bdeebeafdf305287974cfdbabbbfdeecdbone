@@ -14,3 +14,6 @@ resource "aws_instance" "linux_server" {
     ami = "SUSE Linux Enterprise Server 12 SP5"
     instance_type = "t2.micro"
 }
+output "Pubic-IP" {
+    value = aws_instance.linux_server.public_ip
+}
